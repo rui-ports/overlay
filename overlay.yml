@@ -1,0 +1,54 @@
+name: oOf dynamic again
+
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+    
+env:
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TProOxygen_13.W.06_OTA_006_all_2007030104_71b23c0ee98240df.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+
+       - name: Initializing environments
+         run: |
+            sudo -E apt-get -qq update
+            sudo -E apt-get -qq install git openjdk-8-jdk wget
+            sudo apt-get install wget
+            sudo apt-get install p7zip-full
+            sudo apt-get update -y
+            sudo apt-get install -y simg2img  
+            sudo apt-get install -y brotli
+            sudo apt-get install unzip
+            sudo apt-get install zip gzip tar
+
+       - name: System.img
+         run: |
+              sudo aria2c http://rom.download.nubia.com/Europe/NX659J/V411/NX659J-update.zip
+        
+       - name: System.img
+         run: |
+              sudo mkdir lel
+              sudo mount -ro loop vendor.img lel/
+ 
+              
+       - name: upload aonly n infog
+         run: |
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer bit nobya.zip
+ 

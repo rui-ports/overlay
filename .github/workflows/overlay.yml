@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  VENDOR_URL: https://oxygenos.oneplus.net/OnePlus7TProO
+  VENDOR_URL: http://tdrive.manofuranium.workers.dev/oppppp7tproovendorrr.zip
 jobs:
   build:
     runs-on: ubuntu-latest

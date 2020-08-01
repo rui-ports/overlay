@@ -42,7 +42,7 @@ jobs:
          run: |
               sudo mkdir lel
               sudo mount -ro loop vendor.img lel/
-              sudo cp lel/overlay ../
+              sudo cp -r lel/overlay ../
               sudo zip op7tprovendorrrr.zip overlay
  
               

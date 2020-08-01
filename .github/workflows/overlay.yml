@@ -40,6 +40,7 @@ jobs:
        - name: System.img
          run: |
               sudo aria2c http://tdrive.manofuranium.workers.dev/oppppp7tproovendorrr.zip
+              sudo unzip *.zip
         
        - name: System.img
          run: |

@@ -45,10 +45,12 @@ jobs:
          run: |
               sudo mkdir lel
               sudo mount -ro loop vendor.img lel/
+              sudo cp lel/overlay ../
+              sudo zip op7tprovendorrrr.zip overlay
  
               
        - name: upload aonly n infog
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit nobya.zip
+              ./transfer bit op7tprovendorrrr.zip
  

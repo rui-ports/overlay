@@ -42,9 +42,8 @@ jobs:
          run: |
               sudo mkdir lel
               sudo mount -ro loop vendor.img lel/
-              sudo cp -r lel/overlay ../
+              sudo cp -r lel/overlay ../../
               sudo zip op7tprovendorrrr.zip overlay
- 
               
        - name: upload aonly n infog
          run: |

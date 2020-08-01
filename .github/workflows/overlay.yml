@@ -48,5 +48,5 @@ jobs:
        - name: upload aonly n infog
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit op7tprovendorrrr.zip
+              ./transfer gof op7tprovendorrrr.zip
  

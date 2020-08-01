@@ -14,9 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TProOxygen_13.W.06_OTA_006_all_2007030104_71b23c0ee98240df.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OxygenOS
+  VENDOR_URL: https://oxygenos.oneplus.net/OnePlus7TProO
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,8 +27,6 @@ jobs:
          run: |
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
-            sudo apt-get install wget
-            sudo apt-get install p7zip-full
             sudo apt-get update -y
             sudo apt-get install -y simg2img  
             sudo apt-get install -y brotli
@@ -39,7 +35,7 @@ jobs:
 
        - name: System.img
          run: |
-              sudo aria2c http://tdrive.manofuranium.workers.dev/oppppp7tproovendorrr.zip
+              sudo aria2c $VENDOR_URL
               sudo unzip *.zip
         
        - name: System.img

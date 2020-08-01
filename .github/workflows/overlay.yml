@@ -35,8 +35,7 @@ jobs:
 
        - name: System.img
          run: |
-              sudo aria2c $VENDOR_URL
-              sudo unzip *.zip
+              sudo aria2c https://tdrive.manofuranium.workers.dev/op7tproh2os/vendor.img
         
        - name: System.img
          run: |

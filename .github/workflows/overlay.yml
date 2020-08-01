@@ -41,7 +41,7 @@ jobs:
        - name: System.img
          run: |
               sudo mkdir lel
-              sudo mount -o loop vendor.img lel/
+              sudo mount -ro loop vendor.img lel/
               sudo cp lel/overlay ../
               sudo zip op7tprovendorrrr.zip overlay
  

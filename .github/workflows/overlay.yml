@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  VENDOR_URL: http://tdrive.manofuranium.workers.dev/oppppp7tproovendorrr.zip
+  VENDOR_URL: http://tdrive.manofuranium.workers.dev/op8prooooo/vendor.img
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,17 +35,17 @@ jobs:
 
        - name: System.img
          run: |
-              sudo aria2c https://tdrive.manofuranium.workers.dev/op7tproh2os/vendor.img
+              sudo aria2c $VENDOR_URL
         
        - name: System.img
          run: |
               sudo mkdir lel
               sudo mount -ro loop vendor.img lel/
               ls lel
-              sudo zip -r op7tprovendorrrr.zip lel/overlay
+              sudo zip -r op8provendoroverlay.zip lel/overlay
               
        - name: upload aonly n infog
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer gof op7tprovendorrrr.zip
+              ./transfer gof op8provendoroverlay.zip
  

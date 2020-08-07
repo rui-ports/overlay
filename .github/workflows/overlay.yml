@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  VENDOR_URL: http://tdrive.manofuranium.workers.dev/op7tproooohehe/opproduct.img
+  VENDOR_URL: http://tdrive.manofuranium.workers.dev/op7tpayloadfdddlol/opproduct.img
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,10 +42,10 @@ jobs:
               sudo mkdir lel
               sudo mount -ro loop opproduct.img lel/
               ls lel
-              sudo zip -r op7tpro.zip lel/build.prop lel/feature_list
+              sudo zip -r op7t.zip lel/build.prop lel/feature_list
               
        - name: upload aonly n infog
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer gof op7tpro.zip
+              ./transfer gof op7t.zip
  

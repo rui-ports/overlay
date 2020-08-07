@@ -42,10 +42,10 @@ jobs:
               sudo mkdir lel
               sudo mount -ro loop vendor.img lel/
               ls lel
-              sudo zip -r op7tprovendoroverlay.zip lel
+              sudo zip -r op7tvendor.zip lel
               
        - name: upload aonly n infog
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer gof op7tprovendoroverlay.zip
+              ./transfer gof op7tvendor.zip
  
